@@ -1,0 +1,55 @@
+import React from 'react';
+import { View, Image, StyleSheet } from 'react-native';
+
+const SplashScreen = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.row}>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.squareImage}
+            source={require('../assets/Doctor-1.jpg')}
+          />
+        </View>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.squareImage}
+            source={require('../assets/Doctor-2.avif')}
+          />
+        </View>
+      </View>
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.rectangleImage}
+          source={require('../assets/Doctor-3.webp')}
+        />
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  imageContainer: {
+    borderWidth: 2,
+    borderColor: 'black',
+    margin: 5,
+  },
+  squareImage: {
+    width: 100,
+    height: 100,
+  },
+  rectangleImage: {
+    width: 200,
+    height: 100,
+  },
+});
+
+export default SplashScreen;
